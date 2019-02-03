@@ -94,6 +94,36 @@ Since there is no node at the beginning of the Linked List, we have to cover man
 3. Traverse the list once all items are finished to get tehm in sorted order.
 
 Here is the pseudocode for adding items:
+1. Iterate through the list and check if next node value is less than the key.
+2. Point new node's next to before's next.
+3. Point before's next to new node.
+```
+sentinel -> 3 -> 7 -> 8 -> 14 -> 17 -> x 
+```
+```
+before = sentinel
+while(before.next != null and before.next.data < newNode.data)
+    before = before.next
+
+newCell.next = before.next
+before.next = newCell
+```
+
+This can be made simpler by adding another sentinel at the end of the list with value = Infinity. Thus, it will be always greater than any number in the list. This eliminates the need for null check.
+
+```
+sentinel -> 3 -> 7 -> 8 -> 14 -> 17 -> Inf -> x 
+```
+```
+before = sentinel
+while(before.next.data < newNode.data)
+    before = before.next
+
+newCell.next = before.next
+before.next = newCell
+```
+
+
 
 
 
