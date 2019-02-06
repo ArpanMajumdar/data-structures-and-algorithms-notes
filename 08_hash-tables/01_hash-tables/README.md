@@ -24,7 +24,8 @@ e.g- Phone numbers are stored in a table by looking at the last digit of the num
 ## Why hash tables are good?
 
 Alternatives
-|Method |Insertion | Search |Extra space
+
+|Method |Insertion | Search | Extra space
 |--- |--- |--- |---
 |Sorted list | O(N) | O(N) | Some
 |Sorted array | O(N) | O(N log N) | Some
